@@ -711,6 +711,7 @@ def plot_results(result_path,result):
         print 'plot endweight'
         # First the logweight:
         logweight = data.endweight[0][data.endweight[0]>0]
+        np.save('logweight.npy', logweight)
         figure()
         logbins = logspace(-2,0,10)
         (y,_) = histogram(logweight,bins=logbins)
