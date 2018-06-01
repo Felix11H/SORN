@@ -30,7 +30,7 @@ def pretty_mpl_defaults():
     tmp = cycle[0]
     cycle.remove(tmp)
     cycle.insert(2,tmp)
-    mpl.rcParams['axes.color_cycle'] = cycle
+    #mpl.rcParams['axes.color_cycle'] = cycle
 
     import matplotlib.colors as colors
     cdict = colors.colorConverter.colors
