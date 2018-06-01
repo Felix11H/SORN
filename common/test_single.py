@@ -1,6 +1,6 @@
 from __future__ import division # has to be reimported in every file
-#~ import matplotlib # if from ssh
-#~ matplotlib.use('Agg')
+import matplotlib # if from ssh
+matplotlib.use('Agg')
 import ipdb # prettier debugger
 import os
 import sys
