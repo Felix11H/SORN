@@ -1,4 +1,9 @@
 from __future__ import division
+
+import matplotlib
+matplotlib.use('Agg')
+
+
 from pylab import *
 from scipy.optimize import curve_fit
 from scipy import stats
@@ -52,7 +57,7 @@ def parallel_stats(W_ee_h,W_ee2_h):
 
 def plot_results(result_path,result):
     pretty_mpl_defaults()
-    h5 = tables.openFile(os.path.join(result_path,result),'r')
+    h5 = tables.open_file(os.path.join(result_path,result),'r')
     data = h5.root 
     pickle_dir = data.c.logfilepath[0]
     if not os.path.isdir(pickle_dir):
@@ -2407,4 +2412,4 @@ def plot_results(result_path,result):
             
 if __name__=='__main__':        
     plot_results(path,datafile)
-    show()
+    #show()
